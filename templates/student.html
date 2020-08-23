@@ -1,0 +1,84 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title> Student Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/student.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<nav>
+       <img src="{% static 'css/college logo.jpg' %}" alt="numberz" width="218px" height="38px" style="margin-left: 100px; margin-top: 15px; float: left; display: inline-block;">
+
+       <section style="margin-right: 150px;">
+              <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              </li>
+            </ul>
+       </section>
+
+    </nav>
+
+<div id="backgroundimage"></div>
+<div class="welcome">
+	<h1>Welcome {{inform.name}}!</h1>
+    <h3 align="right"> Date : {{today}}</h3>
+    <h3 align="right"> <a class="btn" role="button" href="{% url 'homepage' %}">Log Out</a></h3>
+</div>
+
+<div class="details">
+	<li><u>Roll No.</u> : {{inform.rollno}}</li>
+	<li><u>Phone No.</u> : {{inform.phone}}</li>
+	<li><u>E-mail Id</u> : {{inform.email}}</li>
+	<li><u>Books Issued</u> : {{count}}</li>
+    <li><u>Fine </u> : Rs. {{fine}}</li>
+</div>
+
+<div class="table">
+<table class="content" border="2px">
+    <thead>
+    <tr height="40px">
+        <th>Book No.</th>
+        <th>Book Name</th>
+        <th>Book Author</th>
+        <th>Date Issued</th>
+        <th>Return Date</th>
+        <th>Return/Issue</th>
+    </tr></thead>
+    <tbody>
+    {% for book in booklist %}
+    <form method="POST" > {% csrf_token %}
+    <tr align="center">
+        <td>{{book.bookno}}</td>
+        <td>{{book.bookname}}</td>
+        <td>{{book.bookauthor}}</td>
+        <td>{{book.dateissued}}</td>
+        <td>{{book.returndate}}</td>
+        <td><input type="submit" name="return" value={{book.bookno}}></td>
+    </tr>
+    </form>
+    {% endfor %}
+    <form method="POST" > {% csrf_token %}
+    <tr align="center">
+        <td><input type="text" placeholder="Enter Book No." name="bookno" required></td>
+        <td><input type="text" placeholder="Enter Book Name" name="bookname" required></td>
+        <td><input type="text" placeholder="Enter Book Author" name="bookauthor" required></td>
+        <td><input type="text" placeholder="Enter Issue Date" name="dateissued" required></td>
+        <td><input type="text" placeholder="Enter Return Date" name="returndate" required></td>
+        <td><input type="submit" name="issue" value="Issue"></td>
+    </tr>
+    </form>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

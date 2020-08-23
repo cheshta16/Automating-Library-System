@@ -1,0 +1,58 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title> Registration form</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<nav>
+       <img src="{% static 'css/college logo.jpg' %}" alt="numberz" width="218px" height="38px" style="margin-left: 100px; margin-top: 15px; float: left; display: inline-block;">
+
+       <section style="margin-right: 150px;">
+              <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              </li>
+            </ul>
+       </section>
+
+    </nav>
+
+<div id="backgroundimage"></div>
+
+<div class="container">
+    <form action='.' method="POST">{% csrf_token %}
+  	<h1><u>Library Automation</u></h1>
+
+    <label for="name"><b>Name </b></label>
+    <input type="text" placeholder="Enter Name" name="name" required><br>
+
+    <label for="roll"><b>Roll No. </b></label>
+    <input type="text" placeholder="Enter Roll number" name="roll" required><br>
+
+    <label for="phone"><b>Phone No. </b></label>
+    <input type="text" placeholder="Enter Phone number" name="phone" required><br>
+
+    <label for="email"><b>E-Mail </b></label>
+    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+    <label for="psw"><b>Password </b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+    <button type="submit">Register</button><br><br><br>
+
+    <label>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+*{margin: 0; padding:0}
+
+body .panel{
+  	width: 240px;
+  	float:right;
+  	padding: 10px;
+  	border: 1px solid gray;
+  	margin: 30px;
+  	background-color: white;
+  	font-size: 24px;
+}
+
+ul#menu li {
+    display: inline-block;
+    float: right;
+    position: relative;
+    margin-top: 28px;
+    margin-left: 10px;
+    margin-right: 35px;
+}
+
+ul#menu li a {
+    text-decoration: none;
+    color: #808080;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+}
+
+#backgroundimage {
+    background-image: url('libpic.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav
+{
+    overflow: auto;
+}
+
+.main{
+    border-radius: 25px;
+  	width: 800px;
+  	height: 450px;
+  	background-color : #fffdd0;
+    padding-top: 25px;
+  	position: absolute;
+  	top: 30%;
+  	left: 24%;
+  	margin: -25px 0 0 -25px;
+}
+
+h1{
+	padding-top: 15px;
+	text-align: center;
+	font-size: 30px;
+}
+
+h1 span{
+    float:right;
+    margin-right:5px;
+}
+
+h1 .pic{
+	padding: 10px;
+    width: 120px;
+    vertical-align:middle;
+	height: 120px;
+	border: 5px #ffffff;
+}
+
+p{
+	margin: 50px;
+	color: #FF4500;
+    padding-top:25px;
+}
+
+div span{
+    float:right;
+    margin-right:20px;
+}
+
+div .pic1{
+    width: 180px;
+	height: 250px;
+	border: 5px #ffffff;
+}

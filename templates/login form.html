@@ -1,0 +1,49 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title> Login form</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<nav>
+       <img src="{% static 'css/college logo.jpg' %}" alt="numberz" width="218px" height="38px" style="margin-left: 100px; margin-top: 15px; float: left; display: inline-block;">
+
+       <section style="margin-right: 150px;">
+              <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              </li>
+            </ul>
+       </section>
+
+    </nav>
+
+<div id="backgroundimage"></div>
+<form action='.' method="GET">{% csrf_token %}
+  <div class="container">
+  	<h1><u>Library Automation<span></u> <img class="pic" src="{% static 'css/book.jpg' %}"></span></h1>
+
+    <label for="email"><b>E-Mail </b></label>
+    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+    <label for="psw"><b>Password </b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+    <button type="submit">Login</button><br><br>
+
+    <li>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></li>
+
+    <label>
+  </div>
+</form>
+</body>

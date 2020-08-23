@@ -1,0 +1,42 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title> Home Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+<nav>
+       <img src="{% static 'css/college logo.jpg' %}" alt="numberz" width="218px" height="38px" style="margin-left: 100px; margin-top: 15px; float: left; display: inline-block;">
+
+       <section style="margin-right: 150px;">
+              <ul class="nav justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+              </li>
+            </ul>
+       </section>
+
+    </nav>
+
+<div id="backgroundimage"></div>
+
+<div class="main">
+      <h1 align="center"><u>Library Automation System</u></h1><br><br>
+    <span> <img class="pic1" src="{% static 'css/mail.jpg' %}"></span></h1><br>
+	<p> Do you also forget the due date of your book?<br>
+	Have to pay a hefty fine then?</p><br>
+
+	<p> Now, Recieve instant reminders, and never miss any due date.</p>
+</div>
+</body>
+</html>

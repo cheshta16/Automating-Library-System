@@ -1,0 +1,97 @@
+*{margin: 0; padding:0}
+
+form {
+    border-radius: 25px;
+    margin: auto;
+	background-color: #fffdd0;
+	width: 85vh;
+	height: 65vh;
+	border: 3px solid #f1f1f1;
+	text-align: center;
+  	position: absolute;
+  	top: 20%;
+  	left: 30%;
+}
+
+ul#menu li {
+    display: inline-block;
+    float: right;
+    position: relative;
+    margin-top: 28px;
+    margin-left: 10px;
+    margin-right: 35px;
+}
+
+ul#menu li a {
+    text-decoration: none;
+    color: #808080;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+}
+
+#backgroundimage {
+    background-image: url('libpic.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav
+{
+    overflow: auto;
+}
+
+h1{
+	padding-top: 15px;
+	text-align: center;
+	font-size: 30px;
+}
+
+h1 span{
+    float:right;
+    margin-right:5px;
+}
+
+h1 .pic{
+	padding: 10px;
+    width:120px;
+    vertical-align:middle;
+	height: 120px;
+	border: 5px #ffffff;
+}
+
+label {
+	width: 100px;
+	display: inline-block;
+	text-align: left;
+	color: #FF4500;
+}
+
+li{
+	list-style-type: none;
+	color: #3366ff;
+}
+
+
+input[type=text], input[type=password] {
+    width: 225px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	margin-left: 4px;
+	border: 1px solid #ccc;
+	display: inline-block;
+}
+
+button {
+  	background-color: #FF4500;
+  	color: white;
+  	padding: 14px 20px;
+  	margin: 8px 0;
+  	margin-left: 3.5vh;
+  	border: none;
+  	cursor: pointer;
+  	width: 25%;
+  	display: inline-block;
+}
